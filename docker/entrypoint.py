@@ -105,6 +105,10 @@ prompt_workflow = json.load(open('workflow.json'))
 prompt = os.environ.get("PROMPT") or "question mark floating in space"
 prompt_workflow["prompt"] = prompt
 
+# Get system from $SYSTEM environment variable
+system = os.environ.get("SYSTEM") or "you are helpful assistant"
+prompt_workflow["system"] = system
+
 # everything set, add entire workflow to queue.
 model_response = run_prompt(prompt_workflow)
 
