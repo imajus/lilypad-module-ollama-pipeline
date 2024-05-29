@@ -2,6 +2,5 @@
   "model": "llama3",
   "system": "You are helpful assistant",
   "prompt": "Why is the sky blue?",
-  "format": "json",
   "stream": false
 }
