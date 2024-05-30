@@ -19,10 +19,10 @@
                 "Params": {
                 "Entrypoint": null,
                 "EnvironmentVariables": [
-                    {{ if .Prompt }}"{{ subst "PROMPT=%s" .Prompt }}"{{ end }},
-                    {{ if .System }}"{{ subst "SYSTEM=%s" .System }}"{{ end }},
-                    {{ if .Format }}"{{ subst "FORMAT=%s" .Format }}"{{ end }},
-                    {{ if .Options }}"{{ subst "OPTIONS=%s" .Options }}"{{ end }},
+                    {{ if .Prompt }}"{{ subst "PROMPT=%s" .Prompt }}",{{ end }}
+                    {{ if .System }}"{{ subst "SYSTEM=%s" .System }}",{{ end }}
+                    {{ if .Format }}"{{ subst "FORMAT=%s" .Format }}",{{ end }}
+                    {{ if .Options }}"{{ subst "OPTIONS=%s" .Options }}",{{ end }}
                     "HF_HUB_OFFLINE=1"
                 ],
                 "Image": "ghcr.io/imajus/lilypad-ollama:main",
